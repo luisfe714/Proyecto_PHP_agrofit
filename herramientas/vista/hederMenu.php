@@ -29,7 +29,7 @@
 						<div class="offcanvas-body flex-column p-3">
 							<a href="#" class="d-none d-lg-flex align-items-center gap-2 mb-3 pb-3 text-white text-decoration-none border-bottom border-secondary">
 								<img src="../../img/logoSenaFN.png" alt="SENA" width='50px' height="50px">
-								<span class="fs-5 fw-semibold">GYM - Sena</span>
+								<span class="fs-5 fw-semibold">AGROFIT - Sena</span>
 							</a>
 							<ul class="nav nav-pills flex-column gap-1" id="listaMenu">
 								<li class="nav-item">
@@ -51,6 +51,7 @@
 											<li><a class="nav-link text-white-50" href="rutinas.php">Rutinas</a></li>
 											<li><a class="nav-link text-white-50" href="inventario.php">Inventario</a></li>
 											<li><a class="nav-link text-white-50" href="reportes.php">Reportes</a></li>
+											<li><a class="nav-link text-white-50" href="ejercicios.php">Ejercicios</a></li>
 										</ul>
 									</div>
 								</li>

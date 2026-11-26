@@ -21,10 +21,13 @@
 								<input type="text" class="form-control" id="txtRutina" name="txtRutina"
 									   placeholder="Escriba el nombre de la rutina" onkeydown="event.stopPropagation()">
 							</div>
-							<div class="col-md-4 d-grid">
+							<div class="col-md-4 d-grid gap-2">
 									<!--inicio de botones-->
 								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRutinas">
-									Abrir modal
+									Nueva rutina
+								</button>
+								<button type="button" class="btn btn-primary">
+									Buscar
 								</button>
 								<!--cierre de botones-->
 									<div class="modal fade" id="modalRutinas" tabindex="-1" aria-labelledby="modalRutinasLabel" aria-hidden="true">
@@ -35,7 +38,37 @@
 													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
 												</div>
 												<div class="modal-body">
-													<p>Contenido del modal de Rutinas.</p>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Nombre de la rutina:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Descripción:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Objetivo:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Nivel:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Series:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Ejercicios:</label>
+														<select class="form-select" id="recipient-name" name="recipient-name" style="cursor:pointer;" >
+															<option value="">Seleccione un ejercicio</option>
+															<option value="1">Ejercicio 1</option>
+															<option value="2">Ejercicio 2</option>
+															<option value="3">Ejercicio 3</option>
+															<option value="4">Ejercicio 4</option>
+															<option value="5">Ejercicio 5</option>
+														</select>
+													</div>
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -46,7 +79,7 @@
 									</div>
 							</div>
 						</div>
-					</div>
+					</div> 
 				</div>
 			</main>
 		<!-- ================= CIERRE CONTENIDO DE CADA PAGINA ================= -->
