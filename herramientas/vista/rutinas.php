@@ -26,6 +26,9 @@
 								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRutinas">
 									Nueva rutina
 								</button>
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAsiRutinas">
+									Asignar Rutinas
+								</button>
 								<button type="button" class="btn btn-primary">
 									Buscar
 								</button>
@@ -67,6 +70,53 @@
 															<option value="3">Ejercicio 3</option>
 															<option value="4">Ejercicio 4</option>
 															<option value="5">Ejercicio 5</option>
+														</select>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+													<button type="button" class="btn btn-primary">Guardar cambios</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal fade" id="modalAsiRutinas" tabindex="-1" aria-labelledby="modalRutinasLabel" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="modalRutinasLabel">Asignación de Rutinas</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+												</div>
+												<div class="modal-body">
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Usuario a asignar:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Rutina a asignar:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Instructor:</label>
+														<input type="text" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Fecha:</label>
+														<input type="date" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Fecha Final:</label>
+														<input type="date" id="recipient-name" name="recipient-name" class="form-control" style="cursor:pointer;" >
+													</div>
+													<div class="mb-3"> 
+														<label for="recipient-name" class="col-form-label">Estado rutina:</label>
+														<select class="form-select" id="recipient-name" name="recipient-name" style="cursor:pointer;" >
+															<option value="">Seleccione un estado</option>
+															<option value="1">Asignada</option>
+															<option value="2">En progreso</option>
+															<option value="3">Completada</option>
+															<option value="4">Pausada</option>
+															<option value="5">Cancelada</option>
 														</select>
 													</div>
 												</div>

@@ -86,7 +86,7 @@
 									<i class="bi bi-person-circle fs-5"></i>
 									<span><?= e($_SESSION['loginUsuSesion'] ?? '') ?></span>
 								</div>
-								<button type="button" id="opSalir2" name="opSalir2" title="opcion salir" class="btn btn-primary w-100 text-start">
+								<button type="button" id="opSalir2" name="opSalir2" title="Opcion salir" class="btn btn-primary w-100 text-start">
 									<i class="bi bi-box-arrow-right"></i> &nbsp Salir
 								</button>
 							</div>
