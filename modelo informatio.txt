@@ -1,0 +1,61 @@
+Datos para el video
+https://adminlte-io.translate.goog/blog/bootstrap-login-forms/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#adminator-signin
+
+Codigo
+
+<input 
+type="text" 
+id='correoUsuario' 
+name='correoUsuario'
+title='Digite su Correo' 
+style='cusror:pointer' 
+class="cl-form-control cl-rounded-left" 
+placeholder="Correo" 
+>
+
+SweetAlert2
+
+<button type="button" 
+id='entrarBtn' 
+name='entrarBtn' 
+style='cursor:pointer;' 
+Title='Opcion para entrar al sistema' 
+class="cl-form-control cl-btn cl-btn-primary cl-rounded submit cl-px-3">
+Entrar
+</button>
+
+
+<script src="herramientas/js/loguin.js"></script>
+
+
+alert('JE JE JE JE JE...... COMO TAS....!!!!!!');
+
+
+	$("#entrarBtn").click(function() {        
+		if ($("#correoUsu").val()==""){
+            alert('Digite el usuario');
+			$("#correoUsu").focus();
+        }else{
+			if ($("#claveUsu").val()==""){
+				alert('Digite la clave');
+				$("#claveUsu").focus();				
+			}else{	
+				
+				}	
+		}
+	});
+	
+	
+	$.ajax({
+	url: "herramientas/controlador/loguinControl.php", type: "POST",
+		data: { 
+			opcion : "inicioSesion",
+			dato_usuario: $("#correo_e").val(),
+			dato_clave  : $("#clave").val()
+		},
+		success: function(response) {							
+			if (response.estado == 0) 
+				 { alert("CREDENCIALES INCORRECTAS."); }
+			else { window.location.href = "herramientas/controlador/menu.php";  }
+		}
+});

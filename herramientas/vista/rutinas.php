@@ -1,0 +1,56 @@
+<?php require_once '../include/antiIntruccion_and_Testin.php'; ?>
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>GYM-Sena</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<?php require_once 'head.php'; ?> 		
+	</head>
+	<body class="bg-light" oncontextmenu="return false" onkeydown="return false">		
+		<?php require_once 'hederMenu.php'; ?> 
+		<!-- ================= INICIO CONTENIDO DE CADA PAGINA ================= -->
+			<main class="col p-4 min-vh-100">
+				<h1 class="h3">FORMULARIO DE INGRESO RUTINAS</h1>
+				<div class="card shadow-sm mt-4">
+					<div class="card-body">
+						<div class="row g-2 align-items-end">
+							<div class="col-md-8">
+								<label for="txtRutina" class="form-label">Nombre de la rutina</label>
+								<!-- stopPropagation permite escribir aunque el body tenga onkeydown="return false" -->
+								<input type="text" class="form-control" id="txtRutina" name="txtRutina"
+									   placeholder="Escriba el nombre de la rutina" onkeydown="event.stopPropagation()">
+							</div>
+							<div class="col-md-4 d-grid">
+									<!--inicio de botones-->
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRutinas">
+									Abrir modal
+								</button>
+								<!--cierre de botones-->
+									<div class="modal fade" id="modalRutinas" tabindex="-1" aria-labelledby="modalRutinasLabel" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="modalRutinasLabel">Modal de Rutinas</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+												</div>
+												<div class="modal-body">
+													<p>Contenido del modal de Rutinas.</p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+													<button type="button" class="btn btn-primary">Guardar cambios</button>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		<!-- ================= CIERRE CONTENIDO DE CADA PAGINA ================= -->
+		<?php require_once 'fooderMenu.php'; ?> 
+	</body>
+</html>
+

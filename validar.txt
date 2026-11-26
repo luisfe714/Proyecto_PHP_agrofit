@@ -1,0 +1,62 @@
+<input
+    type="email"
+    name="correo"
+    placeholder="usuario@soy.sena.edu.co"
+    pattern="[a-zA-Z0-9._%+-]+@soy\.sena\.edu\.co"
+    title="Solo se permiten correos @soy.sena.edu.co"
+    required
+>
+
+$email = trim($_POST['correo'] ?? '');
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "El correo no tiene un formato válido.";
+} elseif (!str_ends_with(strtolower($email), '@soy.sena.edu.co')) {
+    echo "Solo se permiten correos institucionales @soy.sena.edu.co";
+} else {
+    echo "Correo institucional válido.";
+}
+
+Debes colocarlo principalmente en logincontrol.php, no solamente en JavaScript.
+
+La razón es que JavaScript valida en el navegador, pero PHP debe volver a validar antes de procesar el inicio de sesión o el registro.
+1. En JavaScript (validación visual)
+Puedes validar antes de enviar el formulario:
+const correo = document.getElementById('correo').value.trim();
+
+if (!correo.toLowerCase().endsWith('@soy.sena.edu.co')) {
+    alert('Solo se permiten correos institucionales @soy.sena.edu.co');
+    return false;
+}
+
+
+2. En logincontrol.php (validación obligatoria)
+Al comienzo del procesamiento del formulario, antes de consultar MySQL:
+$email = trim($_POST['correo'] ?? '');
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) ||
+    !str_ends_with(strtolower($email), '@soy.sena.edu.co')) {
+
+    echo "<script>
+        alert('Solo se permiten correos institucionales @soy.sena.edu.co');
+        window.history.back();
+    </script>";
+    exit;
+}
+
+
+3. ¿Dónde va exactamente?
+logincontrol.php
+Obligatorio
+
+1. Recibir el correo mediante $_POST.
+2. Validar el formato y el dominio institucional.
+3. Consultar el usuario en MySQL.
+4. Validar la contraseña.
+5. Iniciar sesión.
+
+login.js
+Complementario
+
+Validación rápida para mostrar el mensaje antes de enviar el formulario.
+Mi recomendación: envíame el código de tu logincontrol.php y de tu JavaScript. Te indico exactamente dónde insertar la validación sin alterar el funcionamiento de tu login.
